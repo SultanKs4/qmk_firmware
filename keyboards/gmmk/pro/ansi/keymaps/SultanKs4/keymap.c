@@ -54,11 +54,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [1] = LAYOUT(
-        _______, KC_MYCM, KC_WHOM, KC_CALC, KC_MSEL, KC_MPRV, KC_MNXT, KC_MPLY, KC_MSTP, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______,          _______,
-        _______, RGB_TOG, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
-        _______, _______, RGB_VAI, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RESET,            _______,
-        _______, _______, RGB_VAD, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,          _______,
-        _______,          _______, RGB_HUI, _______, _______, _______, NK_TOGG, _______, _______, _______, _______,          _______, RGB_MOD, _______,
+        _______, KC_MYCM, KC_WHOM, KC_CALC, KC_MSEL, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
+        _______, RGB_TOG, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          KC_INS,
+        _______, _______, RGB_VAI, RGB_SAI, RGB_HUI, _______, _______, _______, _______, _______, KC_MPLY, _______, _______, RESET,            _______,
+        _______, _______, RGB_VAD, RGB_SAD, RGB_HUD, _______, _______, _______, _______, _______, _______, _______,          _______,          _______,
+        _______,          _______, _______, _______, _______, _______, NK_TOGG, _______, KC_MPRV, KC_MNXT, _______,          _______, RGB_MOD, KC_HOME,
         _______, _______, _______,                            _______,                            _______, _______, _______, RGB_SPD, RGB_RMOD, RGB_SPI
     ),
 
@@ -264,23 +264,23 @@ static void start_effects() {
 #endif // RGB_CONFIRMATION_BLINKING_TIME > 0
 
 static void set_rgb_caps_leds() {
-    rgb_matrix_set_color(67, 0xFF, 0x0, 0x0); // Left side LED 1
-    rgb_matrix_set_color(68, 0xFF, 0x0, 0x0); // Right side LED 1
-    rgb_matrix_set_color(70, 0xFF, 0x0, 0x0); // Left side LED 2
-    rgb_matrix_set_color(71, 0xFF, 0x0, 0x0); // Right side LED 2
-    rgb_matrix_set_color(73, 0xFF, 0x0, 0x0); // Left side LED 3
-    rgb_matrix_set_color(74, 0xFF, 0x0, 0x0); // Right side LED 3
-    rgb_matrix_set_color(76, 0xFF, 0x0, 0x0); // Left side LED 4
-    rgb_matrix_set_color(77, 0xFF, 0x0, 0x0); // Right side LED 4
-    rgb_matrix_set_color(80, 0xFF, 0x0, 0x0); // Left side LED 5
-    rgb_matrix_set_color(81, 0xFF, 0x0, 0x0); // Right side LED 5
-    rgb_matrix_set_color(83, 0xFF, 0x0, 0x0); // Left side LED 6
-    rgb_matrix_set_color(84, 0xFF, 0x0, 0x0); // Right side LED 6
-    rgb_matrix_set_color(87, 0xFF, 0x0, 0x0); // Left side LED 7
-    rgb_matrix_set_color(88, 0xFF, 0x0, 0x0); // Right side LED 7
-    rgb_matrix_set_color(91, 0xFF, 0x0, 0x0); // Left side LED 8
-    rgb_matrix_set_color(92, 0xFF, 0x0, 0x0); // Right side LED 8
-    rgb_matrix_set_color(3, 0xFF, 0x0, 0x0); // CAPS LED
+    rgb_matrix_set_color(67, 0x00, 0x12, 0x39); // Left side LED 1
+    rgb_matrix_set_color(68, 0x00, 0x12, 0x39); // Right side LED 1
+    rgb_matrix_set_color(70, 0x00, 0x12, 0x39); // Left side LED 2
+    rgb_matrix_set_color(71, 0x00, 0x12, 0x39); // Right side LED 2
+    rgb_matrix_set_color(73, 0x00, 0x12, 0x39); // Left side LED 3
+    rgb_matrix_set_color(74, 0x00, 0x12, 0x39); // Right side LED 3
+    rgb_matrix_set_color(76, 0x00, 0x12, 0x39); // Left side LED 4
+    rgb_matrix_set_color(77, 0x00, 0x12, 0x39); // Right side LED 4
+    rgb_matrix_set_color(80, 0x00, 0x12, 0x39); // Left side LED 5
+    rgb_matrix_set_color(81, 0x00, 0x12, 0x39); // Right side LED 5
+    rgb_matrix_set_color(83, 0x00, 0x12, 0x39); // Left side LED 6
+    rgb_matrix_set_color(84, 0x00, 0x12, 0x39); // Right side LED 6
+    rgb_matrix_set_color(87, 0x00, 0x12, 0x39); // Left side LED 7
+    rgb_matrix_set_color(88, 0x00, 0x12, 0x39); // Right side LED 7
+    rgb_matrix_set_color(91, 0x00, 0x12, 0x39); // Left side LED 8
+    rgb_matrix_set_color(92, 0x00, 0x12, 0x39); // Right side LED 8
+    rgb_matrix_set_color(3, 0x00, 0x12, 0x39); // CAPS LED
 }
 
 #endif // RGB_MATRIX_ENABLE
